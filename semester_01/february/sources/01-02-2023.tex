@@ -1,0 +1,88 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+
+\usepackage{minted}
+
+\title{Алгоритмы и алгоритмические языки}
+\author{Лисид Лаконский}
+\date{February 2023}
+
+\begin{document}
+\raggedright
+
+\maketitle
+\tableofcontents
+\pagebreak
+
+\section{Алгоритмы и алгоритмические языки - 01.02.2023}
+
+dll — \textbf{динамически подключаемая библиотека}
+
+Для создания dll в Visual Studio необходимо выбрать шаблон «\textbf{библиотека классов}»
+
+\subsection{Проект «вычисление суммы квадратов двух чисел»}
+
+\subsubsection{Динамическая библиотека}
+
+Для решения поставленной задачи нам необходимо реализовать: \textbf{метод нахождения суммы квадратов двух чисел, метод для ввода данных, метод для вывода данных}
+
+\begin{minted}{csharp}
+using System;
+using System.Windows.Forms;
+
+namespace ClassLibrary1
+{
+    public class Class1 {
+        public static int Vvod(TextBox t)
+        {
+            return Convert.ToInt(t.Text);
+        }
+        public static int Vyvod(TextBox t, int c)
+        {
+            t.Text = Convert.ToString(c);
+        }
+        public static int Sum_kv(int x, int y)
+        {
+            int res = x * x + y * y;
+            return res;
+        }
+    }
+}
+\end{minted}
+
+В настоящих проектах рекомендуется давать классам, методам, переменным и так далее \textbf{нормальные имена}, а не как в коде выше.
+
+\subsubsection{Основная программа}
+
+Помещаем в форму с помощью вкладки «элементы управления» следующие компоненты: три надписи (\textbf{label}), два поля ввода текста (\textbf{textbox}) и одну кнопку (\textbf{button})
+
+Код собственно программы:
+
+\begin{minted}{csharp}
+using System;
+// Прочие юзинги...
+using LibraryClass1;
+
+namespace ClassProgram1 {
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int a = Class1.Vvod(textBox1);
+            int b = Class1.Vvod(textBox2);
+            int y = Class1.Sum_kv(a, b);
+            Class1.Vyvod(textBox3, y);
+        }
+    }
+}
+\end{minted}
+
+\end{document}
