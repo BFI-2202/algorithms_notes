@@ -9,7 +9,7 @@
 | Дата | Тип занятия | Рассмотренные темы | Ссылка на конспект |
 |------|-------------|--------------------|--------------------|
 | 01.02.2023 | Лекция | Проект «вычисление квадратов двух чисел» | [tex](semester_01/february/sources/01-02-2023.tex), [pdf](semester_01/february/renders/01-02-2023.pdf)       |
-| 07.02.2023 | Лекция | Проект «вычисление квадратов двух чисел» | [tex](semester_01/february/sources/07-02-2023.tex), [pdf](semester_01/february/renders/07-02-2023.pdf)       |
+| 07.02.2023 | Лабораторная | О лабораторной работе №1 | [tex](semester_01/february/sources/07-02-2023.tex), [pdf](semester_01/february/renders/07-02-2023.pdf)       |
 | **Общий документ** | --- | --- | [tex](semester_01/february/sources/february.tex), [pdf](semester_01/february/renders/february.pdf) |
 
 ### Январь
