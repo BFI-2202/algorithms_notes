@@ -14,10 +14,10 @@ jobs:
       - name: Install LaTeX
         uses: awalsh128/cache-apt-pkgs-action@latest
         with:
-          packages: texlive-latex-base texlive-lang-cyrillic texlive-lang-greek texlive-latex-extra texlive-latex-recommended texlive-pictures texlive-plain-generic texlive-science
+          packages: texlive-latex-base texlive-lang-cyrillic texlive-lang-greek texlive-latex-extra texlive-latex-recommended texlive-pictures texlive-plain-generic texlive-science texlive-extra-utils
       
       - name: Rehash LaTeX
-        run: sudo texhash
+        run: sudo texconfig rehash
 
       - name: Get changed files
         id: changed-files
